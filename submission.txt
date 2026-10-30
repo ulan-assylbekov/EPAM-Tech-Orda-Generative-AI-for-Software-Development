@@ -1,0 +1,9 @@
+Repository: https://github.com/ulan-assylbekov/EPAM-Tech-Orda-Generative-AI-for-Software-Development
+
+Submission contents:
+- research.md: Two practical examples of generative AI use, including business value, technical challenges, limitations, and existing solutions.
+- glossary.md: Definitions of 15 terms related to the report.
+- term_usage.html: Explicit and implicit term usage frequencies, an optional relationship graph, and supporting evidence. Download and open this file in a browser to view the visualization.
+- term_usage.json: Analysis data, matching rules, and evidence for the visualization.
+
+The work was prepared with OpenAI Codex assistance. The author selected the practical examples and participated in reviewing and refining the content.

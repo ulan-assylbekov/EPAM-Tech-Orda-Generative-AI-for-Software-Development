@@ -1,0 +1,368 @@
+{
+  "source": "research.md",
+  "source_sha256": "05692681e14a4ad31e5fdd000f298426d3960cfd6ec5054a30689c460a44705c",
+  "unit": "Explicit: individual matched term occurrences. Implicit: annotated prose paragraphs or solution-list entries without an explicit match of the same term.",
+  "method": "Explicit counts include every case-insensitive regex match, including multiple matches within one passage. Singular/plural and other accepted variants are recorded per term. Implicit counts are qualitative annotations, at most one per term per passage, excluding passages with explicit use of that term. These series have distinct counting units and are displayed separately. Headings and URLs are excluded.",
+  "terms": [
+    {
+      "term": "Generative AI",
+      "explicit": [
+        {
+          "unit": 1,
+          "text": "This report describes two examples of how I use generative AI in my work: testing the Oysyn mobile application and researching methods for detecting AI-generated text. In both cases, I use OpenAI Codex as an assistant, while I remain responsible for defining tasks, evaluating results, and deciding what to do next.",
+          "occurrences": 1
+        }
+      ],
+      "implicit": [],
+      "matching_rule": "generative ai",
+      "implicit_clues": [],
+      "explicit_count": 1,
+      "implicit_count": 0
+    },
+    {
+      "term": "AI agent",
+      "explicit": [
+        {
+          "unit": 5,
+          "text": "OpenAI Codex \u2014 An AI agent I use to analyze the project and help create and run application checks.",
+          "occurrences": 1
+        },
+        {
+          "unit": 8,
+          "text": "The technical challenges involve source reliability and the comparability of findings: detection methods may be evaluated using different languages, text types, and datasets, so reported performance cannot be compared without examining the experimental conditions. The AI agent may overlook an important publication, misrepresent a method, or draw an overly confident conclusion. I therefore verify references and key claims against the original materials, make corrections, and guide subsequent research. I pay particular attention to technological limitations, including false positives in which human-written text is incorrectly classified as AI-generated. The agent helps collect and structure information, while I remain responsible for evaluating methods and choosing the next research direction.",
+          "occurrences": 1
+        },
+        {
+          "unit": 9,
+          "text": "OpenAI Codex \u2014 An AI agent I use to find, organize, and conduct an initial analysis of information about AI-generated text detection methods and technologies.",
+          "occurrences": 1
+        }
+      ],
+      "implicit": [
+        {
+          "unit": 7,
+          "text": "I use OpenAI Codex as a research agent to find and organize information about methods and technologies for distinguishing human-written text from AI-generated text. I define the initial research direction, and the agent helps find scientific publications, descriptions of approaches, and existing solutions in publicly available sources, consolidate the information, and compare methods. I then study the collected materials myself, refine the conclusions, adjust my requests, and set the direction for further research. This is an iterative process: the findings help me formulate new questions and explore promising approaches in greater depth. The practical value is a substantial reduction in the time I spend searching for information, conducting an initial review, and consolidating findings, allowing me to focus more on evaluating technologies and their potential application in Oysyn."
+        }
+      ],
+      "matching_rule": "ai agent",
+      "implicit_clues": [
+        "research agent",
+        "the agent helps"
+      ],
+      "explicit_count": 3,
+      "implicit_count": 1
+    },
+    {
+      "term": "Automated testing",
+      "explicit": [
+        {
+          "unit": 3,
+          "text": "I use OpenAI Codex to help verify the results of my development work on Oysyn, a Flutter mobile application I developed for the company. I ask the agent to help check the interface and individual features, analyze code, and create automated tests. One concrete example is checking the interface on small mobile screens: the login and PIN setup forms, bottom navigation, document cards, and report screen must fit within the available space, and text must not overlap buttons. The project includes Flutter tests that reproduce specific screen dimensions for these checks. The business value is less time spent repeating checks after changes and a lower risk of releasing an application with interface problems that affect usability or functionality.",
+          "occurrences": 1
+        },
+        {
+          "unit": 4,
+          "text": "The technical challenge is that a passing automated test does not guarantee correct behavior on a physical device. The on-screen keyboard, system navigation bars, network conditions, and server responses can all affect the result. The AI may also misunderstand the expected behavior or overlook an important scenario, while a test based on incorrect logic may reinforce an existing error. I therefore treat Codex as a testing assistant: I define the expected results and evaluate the proposed checks. Comprehensive application testing requires supplementing automated tests with checks on physical devices.",
+          "occurrences": 2
+        },
+        {
+          "unit": 6,
+          "text": "Gemini Code Assist \u2014 An AI coding assistant that helps generate automated tests and identify and fix errors exposed by those tests.",
+          "occurrences": 1
+        }
+      ],
+      "implicit": [],
+      "matching_rule": "automated test(?:ing|s)?",
+      "implicit_clues": [],
+      "explicit_count": 4,
+      "implicit_count": 0
+    },
+    {
+      "term": "User interface (UI)",
+      "explicit": [],
+      "implicit": [
+        {
+          "unit": 3,
+          "text": "I use OpenAI Codex to help verify the results of my development work on Oysyn, a Flutter mobile application I developed for the company. I ask the agent to help check the interface and individual features, analyze code, and create automated tests. One concrete example is checking the interface on small mobile screens: the login and PIN setup forms, bottom navigation, document cards, and report screen must fit within the available space, and text must not overlap buttons. The project includes Flutter tests that reproduce specific screen dimensions for these checks. The business value is less time spent repeating checks after changes and a lower risk of releasing an application with interface problems that affect usability or functionality."
+        },
+        {
+          "unit": 4,
+          "text": "The technical challenge is that a passing automated test does not guarantee correct behavior on a physical device. The on-screen keyboard, system navigation bars, network conditions, and server responses can all affect the result. The AI may also misunderstand the expected behavior or overlook an important scenario, while a test based on incorrect logic may reinforce an existing error. I therefore treat Codex as a testing assistant: I define the expected results and evaluate the proposed checks. Comprehensive application testing requires supplementing automated tests with checks on physical devices."
+        }
+      ],
+      "matching_rule": "user interface|\\bui\\b",
+      "implicit_clues": [
+        "check the interface",
+        "on-screen keyboard"
+      ],
+      "explicit_count": 0,
+      "implicit_count": 2
+    },
+    {
+      "term": "Flutter",
+      "explicit": [
+        {
+          "unit": 3,
+          "text": "I use OpenAI Codex to help verify the results of my development work on Oysyn, a Flutter mobile application I developed for the company. I ask the agent to help check the interface and individual features, analyze code, and create automated tests. One concrete example is checking the interface on small mobile screens: the login and PIN setup forms, bottom navigation, document cards, and report screen must fit within the available space, and text must not overlap buttons. The project includes Flutter tests that reproduce specific screen dimensions for these checks. The business value is less time spent repeating checks after changes and a lower risk of releasing an application with interface problems that affect usability or functionality.",
+          "occurrences": 2
+        }
+      ],
+      "implicit": [],
+      "matching_rule": "flutter",
+      "implicit_clues": [],
+      "explicit_count": 2,
+      "implicit_count": 0
+    },
+    {
+      "term": "Test scenario",
+      "explicit": [],
+      "implicit": [
+        {
+          "unit": 3,
+          "text": "I use OpenAI Codex to help verify the results of my development work on Oysyn, a Flutter mobile application I developed for the company. I ask the agent to help check the interface and individual features, analyze code, and create automated tests. One concrete example is checking the interface on small mobile screens: the login and PIN setup forms, bottom navigation, document cards, and report screen must fit within the available space, and text must not overlap buttons. The project includes Flutter tests that reproduce specific screen dimensions for these checks. The business value is less time spent repeating checks after changes and a lower risk of releasing an application with interface problems that affect usability or functionality."
+        },
+        {
+          "unit": 4,
+          "text": "The technical challenge is that a passing automated test does not guarantee correct behavior on a physical device. The on-screen keyboard, system navigation bars, network conditions, and server responses can all affect the result. The AI may also misunderstand the expected behavior or overlook an important scenario, while a test based on incorrect logic may reinforce an existing error. I therefore treat Codex as a testing assistant: I define the expected results and evaluate the proposed checks. Comprehensive application testing requires supplementing automated tests with checks on physical devices."
+        }
+      ],
+      "matching_rule": "test scenarios?",
+      "implicit_clues": [
+        "checking the interface on small mobile screens",
+        "overlook an important scenario"
+      ],
+      "explicit_count": 0,
+      "implicit_count": 2
+    },
+    {
+      "term": "Expected result",
+      "explicit": [
+        {
+          "unit": 4,
+          "text": "The technical challenge is that a passing automated test does not guarantee correct behavior on a physical device. The on-screen keyboard, system navigation bars, network conditions, and server responses can all affect the result. The AI may also misunderstand the expected behavior or overlook an important scenario, while a test based on incorrect logic may reinforce an existing error. I therefore treat Codex as a testing assistant: I define the expected results and evaluate the proposed checks. Comprehensive application testing requires supplementing automated tests with checks on physical devices.",
+          "occurrences": 1
+        }
+      ],
+      "implicit": [],
+      "matching_rule": "expected results?",
+      "implicit_clues": [
+        "expected behavior"
+      ],
+      "explicit_count": 1,
+      "implicit_count": 0
+    },
+    {
+      "term": "AI-generated text",
+      "explicit": [
+        {
+          "unit": 1,
+          "text": "This report describes two examples of how I use generative AI in my work: testing the Oysyn mobile application and researching methods for detecting AI-generated text. In both cases, I use OpenAI Codex as an assistant, while I remain responsible for defining tasks, evaluating results, and deciding what to do next.",
+          "occurrences": 1
+        },
+        {
+          "unit": 7,
+          "text": "I use OpenAI Codex as a research agent to find and organize information about methods and technologies for distinguishing human-written text from AI-generated text. I define the initial research direction, and the agent helps find scientific publications, descriptions of approaches, and existing solutions in publicly available sources, consolidate the information, and compare methods. I then study the collected materials myself, refine the conclusions, adjust my requests, and set the direction for further research. This is an iterative process: the findings help me formulate new questions and explore promising approaches in greater depth. The practical value is a substantial reduction in the time I spend searching for information, conducting an initial review, and consolidating findings, allowing me to focus more on evaluating technologies and their potential application in Oysyn.",
+          "occurrences": 1
+        },
+        {
+          "unit": 9,
+          "text": "OpenAI Codex \u2014 An AI agent I use to find, organize, and conduct an initial analysis of information about AI-generated text detection methods and technologies.",
+          "occurrences": 1
+        },
+        {
+          "unit": 10,
+          "text": "Gemini Deep Research \u2014 A research assistant that searches web sources, analyzes findings, and produces structured reports, making it a relevant option for researching AI-generated text detection methods.",
+          "occurrences": 1
+        }
+      ],
+      "implicit": [],
+      "matching_rule": "ai-generated texts?",
+      "implicit_clues": [],
+      "explicit_count": 4,
+      "implicit_count": 0
+    },
+    {
+      "term": "Text detection",
+      "explicit": [
+        {
+          "unit": 9,
+          "text": "OpenAI Codex \u2014 An AI agent I use to find, organize, and conduct an initial analysis of information about AI-generated text detection methods and technologies.",
+          "occurrences": 1
+        },
+        {
+          "unit": 10,
+          "text": "Gemini Deep Research \u2014 A research assistant that searches web sources, analyzes findings, and produces structured reports, making it a relevant option for researching AI-generated text detection methods.",
+          "occurrences": 1
+        }
+      ],
+      "implicit": [
+        {
+          "unit": 1,
+          "text": "This report describes two examples of how I use generative AI in my work: testing the Oysyn mobile application and researching methods for detecting AI-generated text. In both cases, I use OpenAI Codex as an assistant, while I remain responsible for defining tasks, evaluating results, and deciding what to do next."
+        },
+        {
+          "unit": 7,
+          "text": "I use OpenAI Codex as a research agent to find and organize information about methods and technologies for distinguishing human-written text from AI-generated text. I define the initial research direction, and the agent helps find scientific publications, descriptions of approaches, and existing solutions in publicly available sources, consolidate the information, and compare methods. I then study the collected materials myself, refine the conclusions, adjust my requests, and set the direction for further research. This is an iterative process: the findings help me formulate new questions and explore promising approaches in greater depth. The practical value is a substantial reduction in the time I spend searching for information, conducting an initial review, and consolidating findings, allowing me to focus more on evaluating technologies and their potential application in Oysyn."
+        }
+      ],
+      "matching_rule": "text detection",
+      "implicit_clues": [
+        "methods for detecting AI-generated text",
+        "distinguishing human-written text from AI-generated text"
+      ],
+      "explicit_count": 2,
+      "implicit_count": 2
+    },
+    {
+      "term": "Dataset",
+      "explicit": [
+        {
+          "unit": 8,
+          "text": "The technical challenges involve source reliability and the comparability of findings: detection methods may be evaluated using different languages, text types, and datasets, so reported performance cannot be compared without examining the experimental conditions. The AI agent may overlook an important publication, misrepresent a method, or draw an overly confident conclusion. I therefore verify references and key claims against the original materials, make corrections, and guide subsequent research. I pay particular attention to technological limitations, including false positives in which human-written text is incorrectly classified as AI-generated. The agent helps collect and structure information, while I remain responsible for evaluating methods and choosing the next research direction.",
+          "occurrences": 1
+        }
+      ],
+      "implicit": [],
+      "matching_rule": "datasets?",
+      "implicit_clues": [],
+      "explicit_count": 1,
+      "implicit_count": 0
+    },
+    {
+      "term": "False positive",
+      "explicit": [
+        {
+          "unit": 8,
+          "text": "The technical challenges involve source reliability and the comparability of findings: detection methods may be evaluated using different languages, text types, and datasets, so reported performance cannot be compared without examining the experimental conditions. The AI agent may overlook an important publication, misrepresent a method, or draw an overly confident conclusion. I therefore verify references and key claims against the original materials, make corrections, and guide subsequent research. I pay particular attention to technological limitations, including false positives in which human-written text is incorrectly classified as AI-generated. The agent helps collect and structure information, while I remain responsible for evaluating methods and choosing the next research direction.",
+          "occurrences": 1
+        }
+      ],
+      "implicit": [],
+      "matching_rule": "false positives?",
+      "implicit_clues": [],
+      "explicit_count": 1,
+      "implicit_count": 0
+    },
+    {
+      "term": "Source verification",
+      "explicit": [],
+      "implicit": [
+        {
+          "unit": 8,
+          "text": "The technical challenges involve source reliability and the comparability of findings: detection methods may be evaluated using different languages, text types, and datasets, so reported performance cannot be compared without examining the experimental conditions. The AI agent may overlook an important publication, misrepresent a method, or draw an overly confident conclusion. I therefore verify references and key claims against the original materials, make corrections, and guide subsequent research. I pay particular attention to technological limitations, including false positives in which human-written text is incorrectly classified as AI-generated. The agent helps collect and structure information, while I remain responsible for evaluating methods and choosing the next research direction."
+        }
+      ],
+      "matching_rule": "source verification",
+      "implicit_clues": [
+        "verify references and key claims against the original materials"
+      ],
+      "explicit_count": 0,
+      "implicit_count": 1
+    },
+    {
+      "term": "Experimental conditions",
+      "explicit": [
+        {
+          "unit": 8,
+          "text": "The technical challenges involve source reliability and the comparability of findings: detection methods may be evaluated using different languages, text types, and datasets, so reported performance cannot be compared without examining the experimental conditions. The AI agent may overlook an important publication, misrepresent a method, or draw an overly confident conclusion. I therefore verify references and key claims against the original materials, make corrections, and guide subsequent research. I pay particular attention to technological limitations, including false positives in which human-written text is incorrectly classified as AI-generated. The agent helps collect and structure information, while I remain responsible for evaluating methods and choosing the next research direction.",
+          "occurrences": 1
+        }
+      ],
+      "implicit": [],
+      "matching_rule": "experimental conditions",
+      "implicit_clues": [],
+      "explicit_count": 1,
+      "implicit_count": 0
+    },
+    {
+      "term": "Iterative process",
+      "explicit": [
+        {
+          "unit": 7,
+          "text": "I use OpenAI Codex as a research agent to find and organize information about methods and technologies for distinguishing human-written text from AI-generated text. I define the initial research direction, and the agent helps find scientific publications, descriptions of approaches, and existing solutions in publicly available sources, consolidate the information, and compare methods. I then study the collected materials myself, refine the conclusions, adjust my requests, and set the direction for further research. This is an iterative process: the findings help me formulate new questions and explore promising approaches in greater depth. The practical value is a substantial reduction in the time I spend searching for information, conducting an initial review, and consolidating findings, allowing me to focus more on evaluating technologies and their potential application in Oysyn.",
+          "occurrences": 1
+        }
+      ],
+      "implicit": [],
+      "matching_rule": "iterative process",
+      "implicit_clues": [
+        "refine the conclusions, adjust my requests"
+      ],
+      "explicit_count": 1,
+      "implicit_count": 0
+    },
+    {
+      "term": "Human oversight",
+      "explicit": [],
+      "implicit": [
+        {
+          "unit": 1,
+          "text": "This report describes two examples of how I use generative AI in my work: testing the Oysyn mobile application and researching methods for detecting AI-generated text. In both cases, I use OpenAI Codex as an assistant, while I remain responsible for defining tasks, evaluating results, and deciding what to do next."
+        },
+        {
+          "unit": 4,
+          "text": "The technical challenge is that a passing automated test does not guarantee correct behavior on a physical device. The on-screen keyboard, system navigation bars, network conditions, and server responses can all affect the result. The AI may also misunderstand the expected behavior or overlook an important scenario, while a test based on incorrect logic may reinforce an existing error. I therefore treat Codex as a testing assistant: I define the expected results and evaluate the proposed checks. Comprehensive application testing requires supplementing automated tests with checks on physical devices."
+        },
+        {
+          "unit": 7,
+          "text": "I use OpenAI Codex as a research agent to find and organize information about methods and technologies for distinguishing human-written text from AI-generated text. I define the initial research direction, and the agent helps find scientific publications, descriptions of approaches, and existing solutions in publicly available sources, consolidate the information, and compare methods. I then study the collected materials myself, refine the conclusions, adjust my requests, and set the direction for further research. This is an iterative process: the findings help me formulate new questions and explore promising approaches in greater depth. The practical value is a substantial reduction in the time I spend searching for information, conducting an initial review, and consolidating findings, allowing me to focus more on evaluating technologies and their potential application in Oysyn."
+        },
+        {
+          "unit": 8,
+          "text": "The technical challenges involve source reliability and the comparability of findings: detection methods may be evaluated using different languages, text types, and datasets, so reported performance cannot be compared without examining the experimental conditions. The AI agent may overlook an important publication, misrepresent a method, or draw an overly confident conclusion. I therefore verify references and key claims against the original materials, make corrections, and guide subsequent research. I pay particular attention to technological limitations, including false positives in which human-written text is incorrectly classified as AI-generated. The agent helps collect and structure information, while I remain responsible for evaluating methods and choosing the next research direction."
+        }
+      ],
+      "matching_rule": "human oversight",
+      "implicit_clues": [
+        "I remain responsible",
+        "I define the expected results and evaluate",
+        "I then study the collected materials myself",
+        "I therefore verify references"
+      ],
+      "explicit_count": 0,
+      "implicit_count": 4
+    }
+  ],
+  "passages": {
+    "1": {
+      "label": "Introduction: purpose and responsibility",
+      "text": "This report describes two examples of how I use generative AI in my work: testing the Oysyn mobile application and researching methods for detecting AI-generated text. In both cases, I use OpenAI Codex as an assistant, while I remain responsible for defining tasks, evaluating results, and deciding what to do next."
+    },
+    "5": {
+      "label": "Example 1: OpenAI Codex",
+      "text": "OpenAI Codex \u2014 An AI agent I use to analyze the project and help create and run application checks."
+    },
+    "8": {
+      "label": "Example 2: limitations and verification",
+      "text": "The technical challenges involve source reliability and the comparability of findings: detection methods may be evaluated using different languages, text types, and datasets, so reported performance cannot be compared without examining the experimental conditions. The AI agent may overlook an important publication, misrepresent a method, or draw an overly confident conclusion. I therefore verify references and key claims against the original materials, make corrections, and guide subsequent research. I pay particular attention to technological limitations, including false positives in which human-written text is incorrectly classified as AI-generated. The agent helps collect and structure information, while I remain responsible for evaluating methods and choosing the next research direction."
+    },
+    "9": {
+      "label": "Example 2: OpenAI Codex",
+      "text": "OpenAI Codex \u2014 An AI agent I use to find, organize, and conduct an initial analysis of information about AI-generated text detection methods and technologies."
+    },
+    "7": {
+      "label": "Example 2: research workflow and value",
+      "text": "I use OpenAI Codex as a research agent to find and organize information about methods and technologies for distinguishing human-written text from AI-generated text. I define the initial research direction, and the agent helps find scientific publications, descriptions of approaches, and existing solutions in publicly available sources, consolidate the information, and compare methods. I then study the collected materials myself, refine the conclusions, adjust my requests, and set the direction for further research. This is an iterative process: the findings help me formulate new questions and explore promising approaches in greater depth. The practical value is a substantial reduction in the time I spend searching for information, conducting an initial review, and consolidating findings, allowing me to focus more on evaluating technologies and their potential application in Oysyn."
+    },
+    "3": {
+      "label": "Example 1: interface checks and value",
+      "text": "I use OpenAI Codex to help verify the results of my development work on Oysyn, a Flutter mobile application I developed for the company. I ask the agent to help check the interface and individual features, analyze code, and create automated tests. One concrete example is checking the interface on small mobile screens: the login and PIN setup forms, bottom navigation, document cards, and report screen must fit within the available space, and text must not overlap buttons. The project includes Flutter tests that reproduce specific screen dimensions for these checks. The business value is less time spent repeating checks after changes and a lower risk of releasing an application with interface problems that affect usability or functionality."
+    },
+    "4": {
+      "label": "Example 1: limitations and review",
+      "text": "The technical challenge is that a passing automated test does not guarantee correct behavior on a physical device. The on-screen keyboard, system navigation bars, network conditions, and server responses can all affect the result. The AI may also misunderstand the expected behavior or overlook an important scenario, while a test based on incorrect logic may reinforce an existing error. I therefore treat Codex as a testing assistant: I define the expected results and evaluate the proposed checks. Comprehensive application testing requires supplementing automated tests with checks on physical devices."
+    },
+    "6": {
+      "label": "Example 1: Gemini Code Assist",
+      "text": "Gemini Code Assist \u2014 An AI coding assistant that helps generate automated tests and identify and fix errors exposed by those tests."
+    },
+    "10": {
+      "label": "Example 2: Gemini Deep Research",
+      "text": "Gemini Deep Research \u2014 A research assistant that searches web sources, analyzes findings, and produces structured reports, making it a relevant option for researching AI-generated text detection methods."
+    },
+    "2": {
+      "label": "Introduction: tools and experience",
+      "text": "The practical examples below are based on my use of OpenAI Codex. Gemini Code Assist and Gemini Deep Research are included as other existing solutions relevant to these tasks; I have not used them in the workflows described here."
+    }
+  }
+}
