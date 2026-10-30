@@ -1,0 +1,2 @@
+EPAM email: ulan_assylbekov@epam.com
+Git repository: https://github.com/ulan-assylbekov/EPAM-Tech-Orda-Generative-AI-for-Software-Development
