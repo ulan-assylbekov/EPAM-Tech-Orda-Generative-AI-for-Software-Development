@@ -2,15 +2,18 @@
 
 This report describes two examples of how I use generative AI in my work: testing the Oysyn mobile application and researching methods for detecting AI-generated text. In both cases, I use OpenAI Codex as an assistant, while I remain responsible for defining tasks, evaluating results, and deciding what to do next.
 
+The practical examples below are based on my use of OpenAI Codex. Gemini Code Assist and Gemini Deep Research are included as other existing solutions relevant to these tasks; I have not used them in the workflows described here.
+
 ## 1. Testing a Mobile Application with Generative AI
 
 I use OpenAI Codex to help verify the results of my development work on Oysyn, a Flutter mobile application I developed for the company. I ask the agent to help check the interface and individual features, analyze code, and create automated tests. One concrete example is checking the interface on small mobile screens: the login and PIN setup forms, bottom navigation, document cards, and report screen must fit within the available space, and text must not overlap buttons. The project includes Flutter tests that reproduce specific screen dimensions for these checks. The business value is less time spent repeating checks after changes and a lower risk of releasing an application with interface problems that affect usability or functionality.
 
 The technical challenge is that a passing automated test does not guarantee correct behavior on a physical device. The on-screen keyboard, system navigation bars, network conditions, and server responses can all affect the result. The AI may also misunderstand the expected behavior or overlook an important scenario, while a test based on incorrect logic may reinforce an existing error. I therefore treat Codex as a testing assistant: I define the expected results and evaluate the proposed checks. Comprehensive application testing requires supplementing automated tests with checks on physical devices.
 
-### Implementation Used
+### Existing Solutions
 
 - [OpenAI Codex](https://developers.openai.com/codex/) — An AI agent I use to analyze the project and help create and run application checks.
+- [Gemini Code Assist](https://codelabs.developers.google.com/codelabs/testing-with-gemini-code-assist) — An AI coding assistant that helps generate automated tests and identify and fix errors exposed by those tests.
 
 ## 2. An AI Agent for Researching AI-Generated Text Detection Methods
 
@@ -18,6 +21,7 @@ I use OpenAI Codex as a research agent to find and organize information about me
 
 The technical challenges involve source reliability and the comparability of findings: detection methods may be evaluated using different languages, text types, and datasets, so reported performance cannot be compared without examining the experimental conditions. The AI agent may overlook an important publication, misrepresent a method, or draw an overly confident conclusion. I therefore verify references and key claims against the original materials, make corrections, and guide subsequent research. I pay particular attention to technological limitations, including false positives in which human-written text is incorrectly classified as AI-generated. The agent helps collect and structure information, while I remain responsible for evaluating methods and choosing the next research direction.
 
-### Implementation Used
+### Existing Solutions
 
 - [OpenAI Codex](https://developers.openai.com/codex/) — An AI agent I use to find, organize, and conduct an initial analysis of information about AI-generated text detection methods and technologies.
+- [Gemini Deep Research](https://gemini.google/overview/deep-research/) — A research assistant that searches web sources, analyzes findings, and produces structured reports, making it a relevant option for researching AI-generated text detection methods.
